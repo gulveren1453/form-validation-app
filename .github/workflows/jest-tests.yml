@@ -11,16 +11,16 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: 📥 Kodu çek
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: 🟢 Node.js ortamını ayarla
+      - name: Set up Node.js environment
         uses: actions/setup-node@v3
         with:
           node-version: 18
 
-      - name: 📦 Bağımlılıkları yükle
+      - name: Install dependencies
         run: npm install
 
-      - name: 🧪 Testleri çalıştır
+      - name: Run tests
         run: npm test

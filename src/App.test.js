@@ -108,7 +108,7 @@ describe("Form validation tests", () => {
   test("form submits successfully with valid data", () => {
     fillField("First Name", "Ali");
     fillField("Last Name", "Veli");
-    fillField("E-mail", "ali.veli@example.com");
+    fillField("E-mail", "ali.veliexample.com");
     fillField("Password", "Password@123");
     fillField("Confirm Password", "Password@123");
     fillField("Date of Birth (dd/mm/yyyy)", "01/01/2000");

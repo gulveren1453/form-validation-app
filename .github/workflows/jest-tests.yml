@@ -2,9 +2,9 @@ name: Run Jest Tests
 
 on:
   push:
-    branches: [ main ]
+    branches: [ test-workflow ]
   pull_request:
-    branches: [ main ]
+    branches: [ test-workflow ]
 
 jobs:
   test:
@@ -24,3 +24,4 @@ jobs:
 
       - name: Run tests
         run: npm test
+

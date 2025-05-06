@@ -37,7 +37,7 @@ function App() {
     const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
     const dateRegex = /^\d{2}\/\d{2}\/\d{4}$/;
 
-    // Trim'lenmiş değerleri kontrol et
+   
     const trimmed = {
       firstName: formData.firstName.trim(),
       lastName: formData.lastName.trim(),
@@ -47,20 +47,20 @@ function App() {
       dateOfBirth: formData.dateOfBirth.trim(),
     };
 
-    // FirstName 
+    
     if (!trimmed.firstName) newErrors.firstName = 'First name is required';
 
-    // LastName 
+
     if (!trimmed.lastName) newErrors.lastName = 'Last name is required';
     
-    // Email
+   
     if (!trimmed.email) {
       newErrors.email = 'Email is required';
     } else if (!emailRegex.test(trimmed.email)) {
       newErrors.email = 'Invalid email format';
     }
     
-    // Password
+
     if (!trimmed.password) {
       newErrors.password = 'Password is required';
     } else if (trimmed.password.length < 8) {
@@ -71,14 +71,14 @@ function App() {
       newErrors.password = 'Password must contain at least one special character';
     }
 
-    // Confirm Password
+    
     if (!trimmed.confirmPassword) {
       newErrors.confirmPassword = 'Please confirm your password';
     } else if (trimmed.password !== trimmed.confirmPassword) {
       newErrors.confirmPassword = 'Passwords do not match';
     }    
     
-    // Date Of Birth
+
     if (!trimmed.dateOfBirth) {
       newErrors.dateOfBirth = 'Date of birth is required';
     } else if (!dateRegex.test(trimmed.dateOfBirth)) {
@@ -112,7 +112,7 @@ function App() {
 
   return (
     <div className="app">
-      <h1>Create New Account</h1>
+      <h1>New Account Page</h1>
       {isSubmitted ? (
         <div className="success-message">
           <h2>Account created successfully!</h2>
@@ -121,7 +121,6 @@ function App() {
       ) : (
         <form onSubmit={handleSubmit} className="account-form">
 
-          {/* FirstName  */}
           <div className="form-group">
             <label htmlFor="firstName">First Name</label>
             <input
@@ -135,7 +134,6 @@ function App() {
             {errors.firstName && <span className="error-message">{errors.firstName}</span>}
           </div>
 
-          {/* LastName  */}
           <div className="form-group">
             <label htmlFor="lastName">Last Name</label>
             <input
@@ -149,7 +147,6 @@ function App() {
             {errors.lastName && <span className="error-message">{errors.lastName}</span>}
           </div>
 
-          {/* Email  */}
           <div className="form-group">
             <label htmlFor="email">E-mail</label>
             <input
@@ -164,7 +161,6 @@ function App() {
             {errors.email && <span className="error-message">{errors.email}</span>}
           </div>
 
-          {/* Password  */}
           <div className="form-group">
             <label htmlFor="password">Password</label>
             <input
@@ -178,7 +174,6 @@ function App() {
             {errors.password && <span className="error-message">{errors.password}</span>}
           </div>
 
-          {/* Date of Birth */}
           <div className="form-group">
             <label htmlFor="dateOfBirth">Date of Birth (dd/mm/yyyy)</label>
             <input
@@ -193,7 +188,6 @@ function App() {
             {errors.dateOfBirth && <span className="error-message">{errors.dateOfBirth}</span>}
           </div>
 
-          {/* Confirm Password  */}
           <div className="form-group">
             <label htmlFor="confirmPassword">Confirm Password</label>
             <input

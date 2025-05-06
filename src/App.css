@@ -7,7 +7,7 @@
 
 h1 {
   text-align: center;
-  color: #333;
+  color: black;
 }
 
 .account-form {
@@ -18,7 +18,7 @@ h1 {
 
 .form-group {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   gap: 5px;
 }
 
@@ -28,22 +28,22 @@ label {
 
 input {
   padding: 8px;
-  border: 1px solid #ddd;
+  border: 1px solid white;
   border-radius: 4px;
   font-size: 16px;
 }
 
 input.error {
-  border-color: #ff4444;
+  border-color: red;
 }
 
 .error-message {
-  color: #ff4444;
+  color: red;
   font-size: 14px;
 }
 
 .submit-btn {
-  background-color: #613EEA;
+  background-color: palevioletred;
   color: white;
   padding: 10px 15px;
   border: none;
@@ -53,14 +53,10 @@ input.error {
   margin-top: 10px;
 }
 
-.submit-btn:hover {
-  background-color: #613EEA;
-}
-
 .success-message {
   text-align: center;
   padding: 20px;
   background-color: #dff0d8;
-  color: #3c763d;
+  color: green;
   border-radius: 4px;
 }
